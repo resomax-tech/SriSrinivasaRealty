@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { MapPin, Home, Maximize, Building2 } from 'lucide-react';
 
 const StatsSection = () => {

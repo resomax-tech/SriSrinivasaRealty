@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Car, GraduationCap, Heart, Plane, Leaf } from 'lucide-react';
+import { Car, GraduationCap, Heart, Leaf } from 'lucide-react';
 
 const LocationSection = () => {
   const locationFeatures = [

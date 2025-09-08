@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Download, Send, User, MessageCircle } from 'lucide-react';
+import { Phone, Mail, Send, User, MessageCircle } from 'lucide-react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -42,9 +42,9 @@ const ContactForm = () => {
     }, 1500);
   };
 
-  const handleDownloadBrochure = () => {
-    alert('Brochure download initiated! Check your downloads folder.');
-  };
+  // const handleDownloadBrochure = () => {
+  //   alert('Brochure download initiated! Check your downloads folder.');
+  // };
 
   const contactInfo = [
     {
@@ -62,7 +62,7 @@ const ContactForm = () => {
         <div className="text-center mb-16">
           <h2 className="section-title">Get In Touch</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to invest in your dream home? Contact us today for detailed information 
+            Ready to invest in your dream home? Contact us today for detailed information
             and to schedule a site visit.
           </p>
         </div>
@@ -73,7 +73,7 @@ const ContactForm = () => {
           <div className="lg:col-span-1 min-w-0">
             <div className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-full">
               <h3 className="text-2xl font-bold mb-6 text-black">Contact Information</h3>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
@@ -83,7 +83,7 @@ const ContactForm = () => {
                         <IconComponent className="h-6 w-6 text-green-700" />
                       </div>
                       <div className="min-w-0">
-                        <h4 className="font-semibold text-lg mb-1 text-black mb-4">{info.title}</h4>
+                        <h4 className="font-semibold text-lg text-black mb-4">{info.title}</h4>
                         {info.details.map((detail, idx) => (
                           <p key={idx} className="text-black font-medium break-words mb-4">{detail}</p>
                         ))}
@@ -92,8 +92,23 @@ const ContactForm = () => {
                   );
                 })}
               </div>
+              <div className="space-y-6 mt-5">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-green-100 p-3 rounded-full shrink-0">
+                    <Mail />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="font-semibold text-lg text-black mb-2">
+                      Email Us
+                    </h4>
+                    <p className="text-black font-medium break-words mb-4">srisrinivasarealty16@gmail.com
+</p>
 
-              
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
 
@@ -238,7 +253,7 @@ const ContactForm = () => {
                       </>
                     )}
                   </button>
-                  
+
                   <button
                     type="button"
                     onClick={() => window.open('tel:+917729922244')}

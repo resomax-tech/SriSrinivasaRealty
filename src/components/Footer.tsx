@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Building, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const quickLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About Project', href: '#about' },
@@ -11,17 +14,13 @@ const Footer = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
-  const projectInfo = [
-    'RERA Registration: TG/RERA/PROJ/2024/001234',
-    'Clear Title Properties',
-    '100% Vastu Compliant',
-    'DTCP Approved Layouts',
-    'Bank Loan Facility Available'
-  ];
-
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: href } });
+    } else {
+      const el = document.querySelector(href);
+      el?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -37,18 +36,14 @@ const Footer = () => {
               Experience the true joy of living closer to nature, where every moment is filled with fresh air, serene landscapes, and the harmony of a greener lifestyle.
             </p>
             <div className="flex space-x-4">
-              <div className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+              <a className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer" href='https://www.facebook.com/profile.php?id=61580284165873' target='_blank'>
                 <Facebook className="h-5 w-5" />
-              </div>
-              <div className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer">
-                <Twitter className="h-5 w-5" />
-              </div>
-              <div className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer">
+              </a>
+
+              <a className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer" href='https://www.instagram.com/srisrinivasa.realty' target='_blank'>
                 <Instagram className="h-5 w-5" />
-              </div>
-              <div className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer">
-                <Youtube className="h-5 w-5" />
-              </div>
+              </a>
+
             </div>
           </div>
 
@@ -70,8 +65,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Project Information */}
-
 
             {/* Contact Information */}
             <div>
@@ -87,6 +80,7 @@ const Footer = () => {
                 </div>
 
               </div>
+
             </div>
           </div>
         </div>
@@ -96,18 +90,15 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-white text-sm">
-                © 2025 Sri Srinivas Reality. All rights reserved.
+                © 2025 Sri Srinivasa Realty. All rights reserved.
               </p>
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link to="#" className="text-white transform transition-all hover:scale-105 duration-300">
+              <Link to="/privacy" className="text-white transform transition-all hover:scale-105 duration-300">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-white transform transition-all hover:scale-105 duration-300">
                 Terms & Conditions
-              </Link>
-              <Link to="/disclaimer" className="text-white transform transition-all hover:scale-105 duration-300">
-                Disclaimer
               </Link>
             </div>
           </div>
@@ -116,14 +107,14 @@ const Footer = () => {
           <div className="mt-6 pt-6 border-t border-white-600">
             <p className="text-white text-xs leading-relaxed text-justify">
               <strong>Disclaimer:</strong> The information, layouts, images, and specifications provided on this landing page are for general informational purposes only and are subject to change without prior notice.
-               All project details, and visuals are indicative and for illustrative purposes only. They do not constitute a legal offer, contract, or warranty of any kind. Actual products, materials, dimensions, and 
-               specifications may vary. Prospective buyers are advised to verify all details, including approvals, plans, and project specifications, with the developer/authorized sales team before making any purchase or investment decision.
-               The developer reserves the right to make modifications as deemed necessary.
+              All project details, and visuals are indicative and for illustrative purposes only. They do not constitute a legal offer, contract, or warranty of any kind. Actual products, materials, dimensions, and
+              specifications may vary. Prospective buyers are advised to verify all details, including approvals, plans, and project specifications, with the developer/authorized sales team before making any purchase or investment decision.
+              The developer reserves the right to make modifications as deemed necessary.
             </p>
             <p className="text-white text-sm mb-4 md:mb-0 mt-6">
               © Developed by{" "}
               <a
-                href="https://resomaxtech.com/" 
+                href="https://resomaxtech.com/"
                 target="_blank"
                 rel="noopener noreferrer" // security best practice
                 className="text-white hover:underline"
@@ -132,7 +123,7 @@ const Footer = () => {
               </a>
               .
             </p>
-           </div>
+          </div>
 
         </div>
       </div>

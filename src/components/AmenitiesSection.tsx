@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ImageWithFallback from './ImageWithFallback';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -12,23 +13,23 @@ import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 const AmenitiesSection = () => {
   const amenities = [
     {
-      image: '/images/gallery1.png',
+      image: '/images/gallery1',
       description: 'Olympic-size swimming pool with separate kids pool'
     },
     {
-      image: '/images/gallery6.png',
+      image: '/images/gallery6',
       description: 'Beautiful gardens with walking trails and seating areas'
     },
     {
-      image: '/images/gallery5.png',
+      image: '/images/gallery5',
       description: 'State-of-the-art gym with modern equipment'
     },
     {
-      image: '/images/gallery3.png',
+      image: '/images/gallery3',
       description: 'Community clubhouse for events and gatherings'
     },
     {
-      image: '/images/gallery7.png',
+      image: '/images/gallery7',
       description: 'Covered parking with EV charging stations'
     },
   ];
@@ -58,12 +59,20 @@ const AmenitiesSection = () => {
             >
               {amenities.map((amenity, index) => (
                 <SwiperSlide key={index}>
-                  <img
+                  
+                  {/* <img
                     src={amenity.image}
                     alt={`gallery-${index}`}
                     loading='lazy'
                     className="custom-h w-full object-cover"
-                  />
+                  /> */}
+
+                  <ImageWithFallback 
+                    avif={`${amenity.image}.avif`} 
+                    webp={`${amenity.image}.webp`} 
+                    fallback={`${amenity.image}.jpg`} 
+                    alt={`gallery-${index}`} className="custom-h w-full object-cover" />
+
                 </SwiperSlide>
               ))}
             </Swiper>

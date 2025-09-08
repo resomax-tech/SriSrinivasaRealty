@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, MapPin, Droplets } from 'lucide-react';
+import ImageWithFallback from './ImageWithFallback';
 
 const AboutSection = () => {
   return (
@@ -16,18 +17,27 @@ const AboutSection = () => {
           {/* Image */}
           <div className="fade-in">
             <div className="relative">
-              <img
-                src={"/images/gallery3.png"}
+              {/* <img
+                src={"/images/gallery3.avif"}
                 alt="Luxury Flat/Villa"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
+              /> */}
+
+              <ImageWithFallback 
+              avif={"/images/gallery3.avif"} 
+              webp={"/images/gallery3.webp"} 
+              fallback={"/images/gallery3.png"} 
+              fetchpriority="high"
+              loading='eager'
+              decoding="async"
+              alt="Luxury Flat/Villa" className="w-full h-96 object-cover rounded-2xl shadow-2xl" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 text-white">
                 <h3 className="text-2xl font-bold mb-2 text_shadow">Crafting tomorrow's communities with today's greenest building practices.</h3>
               </div>
             </div>
-            
+
           </div>
 
           {/* Content */}

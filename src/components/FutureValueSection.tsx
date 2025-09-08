@@ -1,34 +1,34 @@
 import React from 'react';
-import { TrendingUp, Calculator, MapPin, Star } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 const FutureValueSection = () => {
-  const plotCategories = [
-    {
-      size: '300-350 Sq. Yds',
-      type: 'Compact Villas',
-      features: ['2-3 BHK', 'Garden space', 'Car parking'],
-      ideal: 'Small families',
-      price: 'Starting from ₹75L',
-      growth: '+15% annually'
-    },
-    {
-      size: '400-450 Sq. Yds',
-      type: 'Premium Villas',
-      features: ['3-4 BHK', 'Spacious layout', '2 car parking'],
-      ideal: 'Growing families',
-      price: 'Starting from ₹95L',
-      growth: '+18% annually',
-      popular: true
-    },
-    {
-      size: '500+ Sq. Yds',
-      type: 'Luxury Villas',
-      features: ['4-5 BHK', 'Premium amenities', 'Large garden'],
-      ideal: 'Luxury seekers',
-      price: 'Starting from ₹1.2Cr',
-      growth: '+20% annually'
-    }
-  ];
+  // const plotCategories = [
+  //   {
+  //     size: '300-350 Sq. Yds',
+  //     type: 'Compact Villas',
+  //     features: ['2-3 BHK', 'Garden space', 'Car parking'],
+  //     ideal: 'Small families',
+  //     price: 'Starting from ₹75L',
+  //     growth: '+15% annually'
+  //   },
+  //   {
+  //     size: '400-450 Sq. Yds',
+  //     type: 'Premium Villas',
+  //     features: ['3-4 BHK', 'Spacious layout', '2 car parking'],
+  //     ideal: 'Growing families',
+  //     price: 'Starting from ₹95L',
+  //     growth: '+18% annually',
+  //     popular: true
+  //   },
+  //   {
+  //     size: '500+ Sq. Yds',
+  //     type: 'Luxury Villas',
+  //     features: ['4-5 BHK', 'Premium amenities', 'Large garden'],
+  //     ideal: 'Luxury seekers',
+  //     price: 'Starting from ₹1.2Cr',
+  //     growth: '+20% annually'
+  //   }
+  // ];
 
   return (
     <section className="py-5 bg-gradient-to-br from-gray-50 to-green-50">
@@ -66,6 +66,6 @@ const FutureValueSection = () => {
 };
 
 // Import CheckCircle from lucide-react
-import { CheckCircle } from 'lucide-react';
+// import { CheckCircle } from 'lucide-react';
 
 export default FutureValueSection;

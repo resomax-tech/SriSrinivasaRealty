@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import ImageWithFallback from './ImageWithFallback';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -23,26 +24,54 @@ const HeroSection = () => {
         className="absolute inset-0 h-full w-full mySwiper"
       >
         <SwiperSlide>
-          <img
+          {/* <img
             src="/images/bg.JPG"
             alt="Villa Greenery"
             loading='lazy'
             className="h-full w-full object-cover"
-          />
+          /> */}
+
+            <ImageWithFallback 
+              avif={"/images/bg.avif"} 
+              webp={"/images/bg.webp"} 
+              fallback={"/images/bg.jpg"} 
+              fetchpriority="high"
+              loading='eager'
+              decoding="async"
+              alt="Villa Greenery" className="h-full w-full object-cover" />  
+
         </SwiperSlide>
         <SwiperSlide>
-          <img
+          {/* <img
             src="/images/gallery7.png"
             alt="Luxury Villas"
             className="h-full w-full object-cover"
-          />
+          /> */}
+
+          <ImageWithFallback 
+              avif={"/images/gallery7.avif"} 
+              webp={"/images/gallery7.webp"} 
+              fallback={"/images/gallery7.jpg"} 
+              fetchpriority="high"
+              loading='eager'
+              decoding="async"
+              alt="Luxury Villas" className="h-full w-full object-cover" />  
         </SwiperSlide>
         <SwiperSlide>
-          <img
+          {/* <img
             src="/images/gallery5.png"
             alt="Nature Lifestyle"
             className="h-full w-full object-cover"
-          />
+          /> */}
+
+          <ImageWithFallback 
+              avif={"/images/gallery5.avif"} 
+              webp={"/images/gallery5.webp"} 
+              fallback={"/images/gallery5.jpg"} 
+              alt="Nature Lifestyle"
+              fetchpriority="high"
+              loading='eager'
+              decoding="async" className="h-full w-full object-cover" /> 
         </SwiperSlide>
       </Swiper>
 
