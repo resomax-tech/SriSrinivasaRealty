@@ -17,6 +17,10 @@ const AmenitiesSection = () => {
       description: 'Olympic-size swimming pool with separate kids pool'
     },
     {
+      image: '/images/bg2',
+      description: 'Olympic-size swimming pool with separate kids pool'
+    },
+    {
       image: '/images/gallery6',
       description: 'Beautiful gardens with walking trails and seating areas'
     },

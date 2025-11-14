@@ -17,13 +17,7 @@ const AboutSection = () => {
           {/* Image */}
           <div className="fade-in">
             <div className="relative">
-              {/* <img
-                src={"/images/gallery3.avif"}
-                alt="Luxury Flat/Villa"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              /> */}
-
-              <ImageWithFallback 
+            <ImageWithFallback 
               avif={"/images/gallery3.avif"} 
               webp={"/images/gallery3.webp"} 
               fallback={"/images/gallery3.png"} 
