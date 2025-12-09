@@ -51,6 +51,7 @@ const ContactForm = () => {
       icon: Phone,
       title: 'Call Us',
       details: ['+91 7729922244', '+91 8008800778', '+91 7729822244'],
+      links: ['tel:+917729922244', 'tel:+918008800778', 'tel:+917729822244'],
       action: 'tel:+917729922244'
     },
   ];
@@ -85,7 +86,10 @@ const ContactForm = () => {
                       <div className="min-w-0">
                         <h4 className="font-semibold text-lg text-black mb-4">{info.title}</h4>
                         {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-black font-medium break-words mb-4">{detail}</p>
+                          <p key={idx} className="text-black font-medium break-words mb-4">
+                            <a href={info.links[idx]} className="hover:underline">
+                              {detail}</a></p>
+
                         ))}
                       </div>
                     </div>
@@ -101,8 +105,9 @@ const ContactForm = () => {
                     <h4 className="font-semibold text-lg text-black mb-2">
                       Email Us
                     </h4>
-                    <p className="text-black font-medium break-words mb-4">srisrinivasarealty16@gmail.com
-</p>
+                    <a href="mailto:srisrinivasarealty16@gmail.com">
+                      srisrinivasarealty16@gmail.com
+                    </a>
 
                   </div>
                 </div>
