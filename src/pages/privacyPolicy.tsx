@@ -1,5 +1,35 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+export const metadata = {
+  title: "Privacy Policy | Vanasthali Hills | Sri Srinivasa Realty",
+  description:
+    "Review our Privacy Policy to know how your information is handled with care. We follow strict security practices to keep your data safe and private.",
+  alternates: {
+    canonical: "https://www.vanasthali9.com/privacy",
+  },
+  openGraph: {
+    url: "https://www.vanasthali9.com/privacy",
+    type: "website",
+    title: "Privacy Policy | Vanasthali Hills | Sri Srinivasa Realty",
+    description:
+      "Review our Privacy Policy to know how your information is handled with care. We follow strict security practices to keep your data safe and private.",
+    images: [
+      {
+        url: "https://www.vanasthali9.com/images/gallery7.avif",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    domain: "vanasthali9.com",
+    url: "https://www.vanasthali9.com/privacy",
+    title: "Privacy Policy | Vanasthali Hills | Sri Srinivasa Realty",
+    description:
+      "Review our Privacy Policy to know how your information is handled with care. We follow strict security practices to keep your data safe and private.",
+    images: ["https://www.vanasthali9.com/images/gallery7.avif"],
+  },
+};
+
 
 export const PrivacyPage = () => {
     return (

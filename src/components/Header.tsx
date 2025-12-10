@@ -40,7 +40,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between gap-8 items-center">
           <div className="flex items-center space-x-2">
-            <img src={'/images/logo3.png'} alt="logo" fetchPriority='high' loading='eager' decoding='async' className='h-16' />
+            <img src={'/images/logo3.png'} alt="Vanasthali Hills & Estates" fetchPriority='high' loading='eager' decoding='async' className='h-16' />
           </div>
 
           <div className="hidden lg:flex items-center gap-6 space-x-10">

@@ -30,7 +30,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2">
-              <img src={'/images/logo2.jpg'} alt="" className='h-40' />
+              <img src={'/images/logo2.jpg'} alt="Sri Srinivasa Realty" className='h-40' />
             </div>
             <p className="text-white mb-6 leading-relaxed text-justify mt-4">
               Experience the true joy of living closer to nature, where every moment is filled with fresh air, serene landscapes, and the harmony of a greener lifestyle.

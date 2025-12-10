@@ -14,18 +14,22 @@ const AmenitiesSection = () => {
   const amenities = [
     {
       image: '/images/gallery1',
+      alt:'real estate in nagole hyderabad',
       description: 'Olympic-size swimming pool with separate kids pool'
     },
     {
       image: '/images/bg2',
+      alt:'rera approved villas in hyderabad',
       description: 'Olympic-size swimming pool with separate kids pool'
     },
     {
       image: '/images/gallery6',
+      alt:'premium villas in hyderabad',
       description: 'Beautiful gardens with walking trails and seating areas'
     },
     {
       image: '/images/gallery5',
+      alt:'plots for sale in nagole hyderabad',
       description: 'State-of-the-art gym with modern equipment'
     },
     {

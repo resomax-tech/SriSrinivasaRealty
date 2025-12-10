@@ -1,8 +1,40 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+export const metadata = {
+  title: "Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty",
+  description:
+    "Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding.",
+  alternates: {
+    canonical: "https://www.vanasthali9.com/terms",
+  },
+  openGraph: {
+    url: "https://www.vanasthali9.com/terms",
+    type: "website",
+    title: "Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty",
+    description:
+      "Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding.",
+    images: [
+      {
+        url: "https://www.vanasthali9.com/images/gallery7.avif",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    domain: "vanasthali9.com",
+    url: "https://www.vanasthali9.com/terms",
+    title: "Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty",
+    description:
+      "Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding.",
+    images: ["https://www.vanasthali9.com/images/gallery7.avif"],
+  },
+};
+
 
 export const TermsPage = () => {
+
   return (
+    
     <div className="flex flex-col min-h-screen ">
       <Header />
       <main className="flex-grow py-24">

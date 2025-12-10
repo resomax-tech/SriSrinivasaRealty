@@ -31,7 +31,7 @@ const HeroSection = () => {
             fetchpriority="high"
             loading='eager'
             decoding="async"
-            alt="Villa Greenery" className="h-full w-full object-cover" />
+            alt="luxury independent houses in hyderabad" className="h-full w-full object-cover" />
 
         </SwiperSlide>
         <SwiperSlide>
@@ -42,7 +42,7 @@ const HeroSection = () => {
             fetchpriority="high"
             loading='eager'
             decoding="async"
-            alt="Luxury Villas" className="h-full w-full object-cover" />
+            alt="eco friendly villas in hyderabad" className="h-full w-full object-cover" />
         </SwiperSlide>
         <SwiperSlide>
           <ImageWithFallback
@@ -52,14 +52,14 @@ const HeroSection = () => {
             fetchpriority="high"
             loading='eager'
             decoding="async"
-            alt="Luxury Villas" className="h-full w-full object-cover" />
+            alt="rera approved villas in hyderabad" className="h-full w-full object-cover" />
         </SwiperSlide>
         <SwiperSlide>
           <ImageWithFallback
             avif={"/images/gallery5.avif"}
             webp={"/images/gallery5.webp"}
             fallback={"/images/gallery5.jpg"}
-            alt="Nature Lifestyle"
+            alt="plots for sale in nagole hyderabad"
             fetchpriority="high"
             loading='eager'
             decoding="async" className="h-full w-full object-cover" />
