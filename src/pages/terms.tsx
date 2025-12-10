@@ -1,39 +1,56 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-export const metadata = {
-  title: "Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty",
-  description:
-    "Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding.",
-  alternates: {
-    canonical: "https://www.vanasthali9.com/terms",
-  },
-  openGraph: {
-    url: "https://www.vanasthali9.com/terms",
-    type: "website",
-    title: "Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty",
-    description:
-      "Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding.",
-    images: [
-      {
-        url: "https://www.vanasthali9.com/images/gallery7.avif",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    domain: "vanasthali9.com",
-    url: "https://www.vanasthali9.com/terms",
-    title: "Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty",
-    description:
-      "Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding.",
-    images: ["https://www.vanasthali9.com/images/gallery7.avif"],
-  },
-};
-
+import { Helmet } from "react-helmet-async";
 
 export const TermsPage = () => {
 
   return (
+      <>
+
+<Helmet>
+  <title>Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty</title>
+
+  <meta
+    name="description"
+    content="Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding."
+  />
+
+  <link rel="canonical" href="https://www.vanasthali9.com/terms" />
+
+  {/* OpenGraph */}
+  <meta property="og:url" content="https://www.vanasthali9.com/terms" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty"
+  />
+  <meta
+    property="og:description"
+    content="Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding."
+  />
+  <meta
+    property="og:image"
+    content="https://www.vanasthali9.com/images/gallery7.avif"
+  />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="vanasthali9.com" />
+  <meta property="twitter:url" content="https://www.vanasthali9.com/terms" />
+  <meta
+    name="twitter:title"
+    content="Terms & Conditions | Vanasthali Hills | Sri Srinivasa Realty"
+  />
+  <meta
+    name="twitter:description"
+    content="Review our Terms & Conditions for clear guidelines on service use, limitations, and user responsibilities. Stay informed before proceeding."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.vanasthali9.com/images/gallery7.avif"
+  />
+</Helmet>
+
     
     <div className="flex flex-col min-h-screen ">
       <Header />
@@ -78,6 +95,7 @@ export const TermsPage = () => {
       </main>
       <Footer />
     </div>
+    </>
   );
 }
 
